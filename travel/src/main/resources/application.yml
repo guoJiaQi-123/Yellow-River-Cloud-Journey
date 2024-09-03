@@ -1,0 +1,50 @@
+#配置端口
+server:
+  port: 80
+
+#配置数据源
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///travel?serverTimeZone=UTC
+#    url: jdbc:mysql://192.168.66.150:3306/travel?serverTimeZone=UTC
+    username: root
+    password: 123456
+  servlet: # 上传文件
+    multipart:
+      max-file-size: 10MB # 最大单个文件
+      max-request-size: 10MB # 最大单个文件
+#  thymeleaf:
+#    mode: HTML
+#    cache: false
+#    prefix: classpath:/templates
+
+#配置mybatis-plus
+mybatis-plus:
+  #全局配置
+  global-config:
+    db-config:
+      #配置主键生成策略：自动递增
+      id-type: auto
+  configuration:
+    #关闭列名自动驼峰命名规则映射(驼峰自动转下划线)
+    map-underscore-to-camel-case: false
+    #开启SQL日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+# 日志格式
+logging:
+  pattern:
+    console: '%d{HH:mm:ss.SSS} %clr(%-5level) ---  [%-15thread] %cyan(%-50logger{50}):%msg%n'
+
+#配置发送邮件
+mail:
+  #发件人地址
+  user: 2667629684@qq.com
+  password: hxgbdlncmcofebgh
+
+#配置项目路径
+project:
+  path:  http://decho.natapp1.cc
+#  path: http://192.168.66.150

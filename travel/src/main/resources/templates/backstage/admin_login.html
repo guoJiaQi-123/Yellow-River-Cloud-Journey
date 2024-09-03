@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>惠农-旅游网--管理员登录</title>
+    <link rel="stylesheet" type="text/css" href="/backstage/css/background.css">
+    <link rel="stylesheet" type="text/css" href="/backstage/css/form.css">
+    <style>
+        .form-container {
+            position: relative;
+            left: 40%;
+            top: 20%;
+        }
+    </style>
+</head>
+
+<body>
+<div id="bg-penuh" />
+<div class="form-container">
+    <p class="title">惠农-旅游网</p>
+    <p class="sub-title">Let farmers see the world and let the world pay attention to farmers</p>
+    <form action="/backstage/admin/login" method="post" class="form" >
+        <input type="text" name="username" class="input" placeholder="userName">
+        <input type="password" name="password" class="input" placeholder="Password">
+        <button class="form-btn" type="submit">Login</button>
+    </form>
+    <p class="sign-up-label">
+        Already have an account?<span class="sign-up-link">Log in</span>
+    </p>
+
+</div>
+
+</body>
+
+</html>

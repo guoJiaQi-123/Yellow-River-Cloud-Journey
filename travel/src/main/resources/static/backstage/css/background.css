@@ -1,0 +1,12 @@
+#bg-penuh {
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    box-shadow: rgba(0, 0, 0, 0.498039) 0px 2000px inset;
+    background: url("https://vimg.zjsnews.cn/zjsportal/news/corver/4f581e852cb9407daef2d5dac0b88273") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/*https://vimg.zjsnews.cn/zjsportal/news/corver/4f581e852cb9407daef2d5dac0b88273*/

@@ -1,0 +1,86 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<aside class="main-sidebar" th:fragment="aside">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="/backstage/img/111.webp" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+                <p th:text="${#authentication.name}"></p>
+                <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+            </div>
+        </div>
+        <!-- /.search form -->
+
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+            <li class="header">菜单</li>
+            <li id="admin-index"><a href="/backstage/index"><i class="fa fa-dashboard"></i> <span>首页</span></a>
+            </li>
+            <!-- 菜单 -->
+            <li class="treeview" id="system">
+                <a href="#">
+                    <i class="fa fa-folder"></i> <span>系统管理</span>
+                    <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li id="admin" sec:authorize="hasAnyAuthority('/admin/all')">
+                        <a href="/backstage/admin/all">
+                            <i class="fa fa-circle-o" ></i>用户管理
+                        </a>
+                    </li>
+
+
+                    <li id="role" sec:authorize="hasAnyAuthority('/role/all')">
+                        <a href="/backstage/role/all">
+                            <i class="fa fa-circle-o" ></i>角色管理
+                        </a>
+                    </li>
+
+
+                    <li id="permission" sec:authorize="hasAnyAuthority('/permission/all')">
+                        <a href="/backstage/permission/all">
+                            <i class="fa fa-circle-o" ></i>权限管理
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="treeview" id="business">
+                <a href="#">
+                    <i class="fa fa-laptop"></i> <span>业务管理</span>
+                    <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li id="category">
+                        <a href="/backstage/category/all">
+                            <i class="fa fa-circle-o"></i>类型管理
+                        </a>
+                    </li>
+
+
+                    <li id="product">
+                        <a href="/backstage/product/all">
+                            <i class="fa fa-circle-o"></i>产品管理
+                        </a>
+                    </li>
+                    <li id="popular">
+                        <a href="/backstage/popular/all">
+                            <i class="fa fa-circle-o"></i>热门管理
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </section>
+
+    <!-- /.sidebar -->
+</aside>

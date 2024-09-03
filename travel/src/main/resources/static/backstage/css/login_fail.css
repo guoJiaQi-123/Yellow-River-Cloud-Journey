@@ -1,0 +1,177 @@
+/*全局样式表*/
+html,
+body,
+#app {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://unsplash.it/1920/1080/?random");
+    background-size: 100%;
+}
+
+body {
+    --para-top: 0px;
+    --para-left: 0px;
+}
+
+.wrapper {
+    background-color: transparent;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgba(51, 51, 51, 0.2);
+
+    @media screen and (max-width: 700px) {
+        background-color: rgba(51, 51, 51, 0.7);
+    }
+
+    &:before {
+        height: calc(100vh + 50px);
+        width: calc(100% + 50px);
+        background-image: url(#{$background-image});
+        background-size: cover;
+        background-position: center center;
+        display: block;
+        content: '';
+        position: absolute;
+        z-index: -9999;
+        top: var(--para-top);
+        left: var(--para-left);
+    }
+}
+
+.content-wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+
+.parallax {
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(100vh + 50px);
+    width: calc(100% + 50px);
+    z-index: -9999;
+    overflow: hidden;
+
+    @media screen and (max-width: 700px) {
+        display: none;
+    }
+
+    &:before {
+        height: calc(100vh + 50px);
+        width: calc(100% + 50px);
+        display: block;
+        content: '';
+        background-color: rgba(51, 51, 51, 0.7);
+        position: absolute;
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+
+    .logo-wrapper {
+        display: flex;
+        color: #FFF;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .logo-container {
+        margin-right: 30px;
+
+        .logo {
+            width: 90px;
+            height: 90px;
+        }
+    }
+}
+
+.parks-copy {
+    font-size: 2em;
+    font-weight: lighter;
+
+    .city-title {
+        font-size: 4em;
+        display: block;
+        color: rgb(0, 128, 128);
+        font-style: italic;
+    }
+
+    @media screen and (max-width: 800px) {
+        font-size: 1.75em;
+
+        .parks-and {
+            display: block;
+        }
+    }
+}
+
+h1 {
+    color: #FFF;
+    margin: 0;
+    font-family: sans-serif;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 700px) {
+        box-sizing: border-box;
+        padding: 0 1em;
+        font-size: 1.5em;
+    }
+}
+
+
+h1 span {
+    display: block;
+
+    @media screen and (max-width: 700px) {
+        display: inline;
+    }
+}
+
+h1 small {
+    margin-top: 0.25em;
+    display: block;
+    font-family: cursive;
+    font-size: 1.25em;
+    font-family: 'Damion', cursive;
+
+    @media screen and (max-width: 700px) {
+        font-size: 1.25em;
+        box-sizing: border-box;
+        padding: 0 1em;
+    }
+}
+
+.home-link {
+
+    color: #FFFFFF;
+    margin: 2em 0;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border: 1px solid #FFF;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+    font-size: 1.5em;
+    font-family: 'Damion', cursive;
+    font-weight: 700;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}

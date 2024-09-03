@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>搜索</title>
+    <link rel="stylesheet" type="text/css" href="/frontdesk/css/common.css">
+    <link rel="stylesheet" href="/frontdesk/css/search.css">
+    <script src="/frontdesk/js/jquery-3.3.1.js"></script>
+
+</head>
+
+<body>
+<!--引入头部-->
+<header th:replace="~{/frontdesk/header::header}"></header>
+<div class="page_one">
+    <div class="contant">
+        <div class="left">
+            <ul>
+                <li th:each="product : ${productPage.records}">
+                    <a th:href="@{/frontdesk/product/productDetail(pid=${product.pid})}">
+                        <img th:src="${product.pImage}" width="320" th:alt="${product.productName}"
+                             th:title="${product.productName}">
+                    </a>
+                    <div class="content">
+                        <a th:href="@{/frontdesk/product/productDetail(pid=${product.pid})}">
+                            <p class="title" th:text="${product.productName}"></p>
+                        </a>
+                        <div>
+                            <p class="price_num">
+                                <span>&yen;</span>
+                                <span th:text="${product.price}"></span>
+                                <span>起</span>
+                            </p>
+                            <p class="details">
+                                <a th:href="@{/frontdesk/product/productDetail(pid=${product.pid})}">查看详情</a>
+                            </p>
+                        </div>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <div class="pageNum">
+                <ul class="pagination">
+
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <ul class="tops_list">
+                <li class="header">热门推荐</li>
+
+                <li class="item" th:each="popular:${populars}"  >
+                    <span class="badge" th:text="${popular.ranking}"></span>
+                    <img th:src="${popular.PImage}" width="80px" height="80px"/>
+                    <div class="contents">
+                        <a th:href="@{/frontdesk/popular/productDetail(pid=${popular.pid})}">
+                            <span th:text="${popular.introduction}"></span>
+                        </a>
+
+                        <p>
+                            <span class="price">￥
+                                <span class="price" th:text="${popular.price}"></span>
+                            </span>
+                            |
+                            <span class="score">
+                                <span class="score" th:text="${popular.scoring}"></span>
+                                分
+                            </span>
+
+                        </p>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<!--引入头部-->
+<script src="/frontdesk/js/bootstrap-paginator.js"></script>
+<footer th:replace="~{/frontdesk/footer::footer}"></footer>
+<script>
+    $(function () {
+        var currentPage = [[${productPage.current}]];// 当前页
+        var pages = [[${productPage.pages}]];// 当前页
+        var cid = '[[${cid}]]';
+        var productName = '[[${productName}]]';
+
+
+        // 分页插件
+        $(".pagination").bootstrapPaginator({
+            bootstrapMajorVersion: 3, // bootstrap版本
+            currentPage: currentPage, // 当前页
+            totalPages: pages, // 总页数
+            numberOfPages: 10, // 最多显示多少页
+            itemTexts: function (type, page, current) {
+                switch (type) {
+                    case "first":
+                        return "首页";
+                    case "prev":
+                        return "<<";
+                    case "next":
+                        return ">>";
+                    case "last":
+                        return "末页";
+                    case "page":
+                        return page;
+                }
+            },
+            onPageClicked: function (event, originalEvent, type, page) { // 点击页码执行的方法
+                location.href = "/frontdesk/product/routeList?cid=" + cid
+                    + "&productName=" + productName
+                    + "&page=" + page;
+            }
+        })
+    })
+</script>
+</body>
+
+</html>

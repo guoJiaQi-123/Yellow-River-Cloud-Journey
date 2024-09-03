@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>首页</title>
+    <!--引入公共CSS文件-->
+    <th:block th:replace="~{/backstage/common_resources::common_css}"></th:block>
+</head>
+
+<body class="hold-transition skin-purple sidebar-mini">
+<div class="wrapper">
+    <!-- 页面头部 -->
+    <header th:replace="~{/backstage/common_header::header}"></header>
+    <!-- 页面头部 /-->
+
+    <!-- 导航侧栏 -->
+    <aside th:replace="~{/backstage/common_aside::aside}"></aside>
+    <!-- 导航侧栏 /-->
+
+    <!-- 内容区域 -->
+    <div class="content-wrapper">
+    </div>
+    <!-- 内容区域 /-->
+
+    <!-- 底部导航 -->
+    <footer th:replace="~{/backstage/common_footer::footer}"></footer>
+    <!-- 底部导航 /-->
+</div>
+<!--引入公共js文件-->
+<th:block th:replace="~{/backstage/common_resources::common_js}"></th:block>
+</body>
+
+</html>
