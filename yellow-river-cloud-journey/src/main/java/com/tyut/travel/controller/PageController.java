@@ -17,6 +17,7 @@ public class PageController {
         return "/backstage/" + page;
     }
 
+
     //前台页面访问
     @RequestMapping("/frontdesk/{page}")
     public String showFrontDeskPage(@PathVariable String page) {
