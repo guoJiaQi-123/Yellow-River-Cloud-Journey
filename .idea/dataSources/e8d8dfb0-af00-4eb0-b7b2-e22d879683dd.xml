@@ -1,44 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="travel@localhost">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.52">
-    <root id="1">
-      <DefaultCasing>lower/lower</DefaultCasing>
-      <DefaultEngine>InnoDB</DefaultEngine>
-      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
-      <Grants>|root||root||ALTER|G
-|root||root||ALTER ROUTINE|G
-|root||root||CREATE|G
-|root||root||CREATE ROUTINE|G
-|root||root||CREATE TABLESPACE|G
-|root||root||CREATE TEMPORARY TABLES|G
-|root||root||CREATE USER|G
-|root||root||CREATE VIEW|G
-|root||root||DELETE|G
-|root||root||DROP|G
-|root||root||EVENT|G
-|root||root||EXECUTE|G
-|root||root||FILE|G
-|root||root||INDEX|G
-|root||root||INSERT|G
-|root||root||LOCK TABLES|G
-|root||root||PROCESS|G
-|root||root||REFERENCES|G
-|root||root||RELOAD|G
-|root||root||REPLICATION CLIENT|G
-|root||root||REPLICATION SLAVE|G
-|root||root||SELECT|G
-|root||root||SHOW DATABASES|G
-|root||root||SHOW VIEW|G
-|root||root||SHUTDOWN|G
-|root||mysql.session|localhost|SUPER|G
-|root||root||SUPER|G
-|root||root||TRIGGER|G
-|root||root||UPDATE|G
-|root||root||grant option|G
-performance_schema|schema||mysql.session|localhost|SELECT|G
-sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
-      <ServerVersion>5.7.36</ServerVersion>
-    </root>
+    <root id="1"/>
     <collation id="2" parent="1" name="big5_chinese_ci">
       <Charset>big5</Charset>
       <DefaultForCharset>1</DefaultForCharset>
