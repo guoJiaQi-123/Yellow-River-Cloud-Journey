@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>产品管理-修改产品</title>
+    <!--引入公共CSS文件-->
+    <th:block th:replace="~{/backstage/common_resources::common_css}"></th:block>
+</head>
+
+<body class="hold-transition skin-purple sidebar-mini">
+<div class="wrapper">
+    <!-- 页面头部 -->
+    <header th:replace="~{/backstage/common_header::header}"></header>
+    <!-- 页面头部 /-->
+
+    <!-- 导航侧栏 -->
+    <aside th:replace="~{/backstage/common_aside::aside}"></aside>
+    <!-- 导航侧栏 /-->
+
+    <!-- 内容区域 -->
+    <div class="content-wrapper">
+
+        <!-- 内容头部 -->
+        <section class="content-header">
+            <h1>
+                <a href="/backstage/product/all">产品管理</a>
+                <small>修改产品</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="/backstage/index"><i class="fa fa-dashboard"></i> 首页</a></li>
+                <li><a href="/backstage/product/all">产品管理</a></li>
+                <li class="active">修改产品</li>
+            </ol>
+        </section>
+        <!-- 内容头部 /-->
+
+        <!-- 正文区域 -->
+        <section class="content">
+            <form th:action="@{/backstage/product/update}" th:method="post">
+                <div class="panel panel-default">
+                    <div class="panel-heading">产品信息</div>
+                    <div class="row data-type">
+                        <input type="hidden" th:value="${product.pid}" name="pid">
+
+                        <div class="col-md-2 title">产品分类</div>
+                        <div class="col-md-4 data" >
+                            <select class="form-control" name="cid" required>
+                                <option  th:each="category:${allCategory}"
+                                         th:value="${category.cid}"
+                                         th:text="${category.cname}"
+                                         th:selected="${category.cid eq product.cid}"></option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-2 title">产品名</div>
+                        <div class="col-md-4 data">
+                            <input type="text" class="form-control" placeholder="产品名" name="productName" th:value="${product.productName}" required>
+                        </div>
+
+                        <div class="col-md-2 title">产品描述</div>
+                        <div class="col-md-4 data">
+                            <input type="text" class="form-control" placeholder="产品描述" name="productDesc"  th:value ="${product.productDesc}" required>
+                        </div>
+
+                        <div class="col-md-2 title">产品价格</div>
+                        <div class="col-md-4 data">
+                            <input type="text" class="form-control" placeholder="产品价格" name="price" th:value ="${product.price}" required>
+                        </div>
+
+                        <div class="col-md-2 title">热线电话</div>
+                        <div class="col-md-4 data">
+                            <input type="tel" class="form-control" placeholder="热线电话" name="hotline" th:value ="${product.hotline}" required>
+                        </div>
+
+
+                        <div class="col-md-2 title">产品状态</div>
+                        <div class="col-md-4 data">
+                            <select class="form-control" name="status" required>
+                                <option value="true">开启</option>
+                                <option value="false">关闭</option>
+                            </select>
+                        </div>
+
+
+                        <div class="col-md-2 title">产品展示地址</div>
+                        <div class="col-md-4 data">
+                            <input type="text" class="form-control" placeholder="产品展示地址" name="pImage" th:value ="${product.PImage}" required>
+                        </div>
+
+
+                        <div class="col-md-10 data text-center">
+                            <button type="submit" class="btn bg-maroon">保存</button>
+                            <button type="button" class="btn bg-default bg-blue" onclick="history.back(-1);">返回
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <!-- 正文区域 /-->
+
+    </div>
+    <!-- 内容区域 /-->
+
+    <!-- 底部导航 -->
+    <footer th:replace="~{/backstage/common_footer::footer}"></footer>
+    <!-- 底部导航 /-->
+</div>
+<!--引入公共js文件-->
+<th:block th:replace="~{/backstage/common_resources::common_js}"></th:block>
+
+</body>
+
+</html>

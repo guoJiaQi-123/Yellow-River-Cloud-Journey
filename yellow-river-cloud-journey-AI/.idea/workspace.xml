@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="062bd375-fdc3-4df6-8cc8-23c780d652ba" name="更改" comment="分析分布式下业务流程优化" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\repository" />
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+        <option name="userSettingsFile" value="D:\Program Files\Lenovo\apache-maven-3.8.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Djava.net.preferIPv4Stack=true" />
+        <option name="workspaceImportForciblyTurnedOn" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2lCO4LlcJ3BrgHfYhhMV5qivHn7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;JUnit.AiManagerTest.doChat.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.AiManagerTest.doChatByQianFan.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RedisLimiterManagerTest.doRateLimit.executor&quot;: &quot;Debug&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.MainApplication.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/repository/com/rabbitmq/amqp-client/5.21.0/amqp-client-5.21.0.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;应用程序.ExcelUtils.executor&quot;: &quot;Debug&quot;,
+    &quot;应用程序.MultiConsumer.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.MultiProducer.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.SingleConsummer.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.SingleProducer.executor&quot;: &quot;Run&quot;,
+    &quot;数据库脚本.create_table.sql.executor&quot;: &quot;Run&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ],
+    &quot;RunConfigurationTargetLRU&quot;: [
+      &quot;e3efdc99-f871-4f73-871a-ad54cdbe6b59&quot;
+    ],
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL 方言&quot;: [
+      &quot;MySQL&quot;
+    ]
+  }
+}</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\项目管理文件夹\智能BI项目\tyut-bi-backend\src\main\resources" />
+      <recent name="E:\项目管理文件夹\智能BI项目\tyut-bi-backend\src\main\java\com\yupi\springbootinit\service\impl" />
+      <recent name="E:\项目管理文件夹\智能BI项目\tyut-bi-backend\src\main\java\com\yupi\springbootinit\model\dto\chart" />
+      <recent name="E:\项目管理文件夹\智能BI项目\tyut-bi-backend\src\main\java\com\yupi\springbootinit\service" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.yupi.springbootinit.service" />
+      <recent name="com.yupi.springbootinit.mapper" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.yupi.springbootinit.manager" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.yupi.springbootinit.manager" />
+      <recent name="com.yupi.springbootinit.model.dto.chart" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.MainApplication">
+    <configuration name="MultiConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yupi.springbootinit.mq.MultiConsumer" />
+      <module name="tyut-bi-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yupi.springbootinit.mq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MultiProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yupi.springbootinit.mq.MultiProducer" />
+      <module name="tyut-bi-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yupi.springbootinit.mq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SingleConsummer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yupi.springbootinit.mq.SingleConsummer" />
+      <module name="tyut-bi-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yupi.springbootinit.mq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SingleProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yupi.springbootinit.mq.SingleProducer" />
+      <module name="tyut-bi-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yupi.springbootinit.mq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisLimiterManagerTest.doRateLimit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tyut-bi-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yupi.springbootinit.manager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.yupi.springbootinit.manager" />
+      <option name="MAIN_CLASS_NAME" value="com.yupi.springbootinit.manager.RedisLimiterManagerTest" />
+      <option name="METHOD_NAME" value="doRateLimit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="tyut-bi-backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yupi.springbootinit.MainApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.MultiConsumer" />
+        <item itemvalue="应用程序.MultiProducer" />
+        <item itemvalue="应用程序.SingleConsummer" />
+        <item itemvalue="应用程序.SingleProducer" />
+        <item itemvalue="JUnit.RedisLimiterManagerTest.doRateLimit" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringProfilesService">
+    <option name="activeProfiles">
+      <map>
+        <entry key="tyut-bi-backend" value="application.yml" />
+      </map>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="062bd375-fdc3-4df6-8cc8-23c780d652ba" name="更改" comment="" />
+      <created>1699928824701</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699928824701</updated>
+      <workItem from="1724680402787" duration="900000" />
+      <workItem from="1724681324297" duration="1464000" />
+      <workItem from="1724683486163" duration="8819000" />
+      <workItem from="1724706705645" duration="12169000" />
+      <workItem from="1724815392138" duration="12234000" />
+      <workItem from="1724924863318" duration="13348000" />
+      <workItem from="1724946484929" duration="969000" />
+      <workItem from="1724994510568" duration="205000" />
+      <workItem from="1725013440468" duration="5067000" />
+      <workItem from="1725079227896" duration="8721000" />
+      <workItem from="1725167977544" duration="8560000" />
+      <workItem from="1725203148897" duration="64000" />
+      <workItem from="1725235620955" duration="862000" />
+      <workItem from="1725245215879" duration="2615000" />
+      <workItem from="1725267045364" duration="4540000" />
+      <workItem from="1725346790728" duration="606000" />
+      <workItem from="1725381031955" duration="1502000" />
+      <workItem from="1725448850407" duration="725000" />
+      <workItem from="1725716779766" duration="460000" />
+      <workItem from="1728641955290" duration="435000" />
+      <workItem from="1728642752062" duration="514000" />
+    </task>
+    <task id="LOCAL-00001" summary="code init">
+      <option name="closed" value="true" />
+      <created>1724693522840</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1724693522840</updated>
+    </task>
+    <task id="LOCAL-00002" summary="完成智能分析后端代码接口实现">
+      <option name="closed" value="true" />
+      <created>1724861732901</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1724861732901</updated>
+    </task>
+    <task id="LOCAL-00003" summary="完成限流逻辑，引入了redisson做了智能生成方法限流">
+      <option name="closed" value="true" />
+      <created>1724946082899</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1724946082899</updated>
+    </task>
+    <task id="LOCAL-00004" summary="删除无用代码逻辑">
+      <option name="closed" value="true" />
+      <created>1724946789002</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1724946789002</updated>
+    </task>
+    <task id="LOCAL-00005" summary="完成项目异步改造">
+      <option name="closed" value="true" />
+      <created>1725090165035</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1725090165035</updated>
+    </task>
+    <task id="LOCAL-00006" summary="分析分布式下业务流程优化">
+      <option name="closed" value="true" />
+      <created>1725203186358</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1725203186358</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="code init" />
+    <MESSAGE value="完成智能分析后端代码接口实现" />
+    <MESSAGE value="完成限流逻辑，引入了redisson做了智能生成方法限流" />
+    <MESSAGE value="删除无用代码逻辑" />
+    <MESSAGE value="完成项目异步改造" />
+    <MESSAGE value="分析分布式下业务流程优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="分析分布式下业务流程优化" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

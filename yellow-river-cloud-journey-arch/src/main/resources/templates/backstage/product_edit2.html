@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>产品管理-修改产品</title>
+    <!--引入公共CSS文件-->
+    <th:block th:replace="~{/backstage/common_resources::common_css}"></th:block>
+</head>
+
+<body class="hold-transition skin-purple sidebar-mini">
+<div class="wrapper">
+    <!-- 页面头部 -->
+    <header th:replace="~{/backstage/common_header::header}"></header>
+    <!-- 页面头部 /-->
+
+    <!-- 导航侧栏 -->
+    <aside th:replace="~{/backstage/common_aside::aside}"></aside>
+    <!-- 导航侧栏 /-->
+
+    <!-- 内容区域 -->
+    <div class="content-wrapper">
+
+        <!-- 内容头部 -->
+        <section class="content-header">
+            <h1>
+                <a href="/backstage/product/all">产品管理</a>
+                <small>修改产品</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="/backstage/index"><i class="fa fa-dashboard"></i> 首页</a></li>
+                <li><a href="/backstage/product/all">产品管理</a></li>
+                <li class="active">修改产品</li>
+            </ol>
+        </section>
+        <!-- 内容头部 /-->
+
+        <!-- 正文区域 -->
+        <section class="content">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">产品信息</div>
+                <div class="row data-type">
+                    <div class="col-md-2 title" style="height: 110px">产品图片</div>
+                    <div class="col-md-8 data" style="height: 110px">
+                        <form id="uploadPImage" enctype="multipart/form-data">
+                            <input type="file" name="file" id="pImagFile">
+                        </form>
+                    </div>
+
+                    <div class="col-md-2 data" style="height: 110px">
+                        <img height="100" th:src="@{${product.PImage}}" id="pImage">
+                    </div>
+
+
+                    <form th:action="@{/backstage/product/update}" th:method="post">
+                        <input type="hidden" name="pid" th:value="${product.pid}">
+                        <input type="hidden" name="pImage" id="hiddenPImage" th:value="${product.PImage}">
+                        <div class="col-md-2 title">产品分类</div>
+                        <div class="col-md-4 data">
+                            <!--                            <input type="text" class="form-control" placeholder="产品分类" name="category.cname">-->
+                            <select class="form-control" name="cid" required>
+                                <option th:each="category:${allCategory}"
+                                        th:value="${category.cid}"
+                                        th:text="${category.cname}"
+                                        th:selected="${category.cid eq product.cid}"></option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-2 title">产品名</div>
+                        <div class="col-md-4 data">
+
+                            <input type="text" class="form-control" placeholder="产品名" name="productName"
+                                   th:value="${product.productName}"
+                                   required>
+                        </div>
+
+
+                        <div class="col-md-2 title">产品价格</div>
+                        <div class="col-md-4 data">
+                            <input type="text" class="form-control" placeholder="产品价格" name="price"
+                                   th:value="${product.price}" required>
+                        </div>
+
+
+                        <div class="col-md-2 title">热线电话</div>
+                        <div class="col-md-4 data">
+                            <input type="tel" class="form-control" placeholder="热线电话" name="hotline"
+                                   th:value="${product.hotline}" required>
+                        </div>
+
+
+                        <div class="col-md-2 title">产品状态</div>
+                        <div class="col-md-4 data">
+                            <select class="form-control" name="status" required>
+                                <option value="true">开启</option>
+                                <option value="false">关闭</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6 data"></div>
+
+
+                        <div class="col-md-2 title" style="height: 350px">产品描述</div>
+                        <div class="col-md-10 data" style="height: 350px">
+                            <div id="div1" >
+                                <p th:utext="${product.productDesc}"></p>
+                                <!--富文本编辑器-->
+                            </div>
+                            <textarea id="text1" name="productDesc" style="width:100%; height:200px;"
+                                       hidden></textarea>
+                        </div>
+                        <div class="col-md-12 data text-center">
+                            <button type="submit" class="btn bg-maroon">修改</button>
+                            <button type="button" class="btn bg-default bg-blue" onclick="history.back(-1);">返回
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- 正文区域 /-->
+        </section>
+    </div>
+    <!-- 内容区域 /-->
+
+    <!-- 底部导航 -->
+    <footer th:replace="~{/backstage/common_footer::footer}"></footer>
+    <!-- 底部导航 /-->
+</div>
+<!--引入公共js文件-->
+<th:block th:replace="~{/backstage/common_resources::common_js}"></th:block>
+<script type="text/javascript">
+    let E = window.wangEditor
+    let editor = new E('#div1')
+    let $text1 = $('#text1')
+    editor.customConfig.onchange = function (html) {
+        // 监控变化，同步更新到 textarea
+        $text1.val(html)
+    }
+    // 配置服务器端地址 配置上传图片服务器端地址
+    editor.customConfig.uploadImgServer = '/backstage/product/upload'
+    //配置上传图片的参数名
+    editor.customConfig.uploadFileName = 'file'
+
+    editor.create()
+    // 初始化 textarea 的值
+    $text1.val(editor.txt.html())
+
+
+    //Ajax异步请求提交图片
+    $(function () {//文档就绪函数
+        $("#pImagFile").change(function () {
+            $("#uploadPImage").ajaxSubmit({
+                url: "/backstage/product/upload",
+                method: "post",
+                success: function (result) {
+                    // 上传成功后，图片回显到pImage上
+                    $("#pImage").attr("src", result.data[0])
+                    // 上传成功后，图片地址放入产品表单的隐藏域中
+                    $("#hiddenPImage").val(result.data[0])
+                }
+            })
+        })
+    })
+
+</script>
+
+</body>
+
+</html>

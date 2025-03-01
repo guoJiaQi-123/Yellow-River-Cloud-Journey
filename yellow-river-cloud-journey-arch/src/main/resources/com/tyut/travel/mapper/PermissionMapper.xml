@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tyut.travel.mapper.PermissionMapper">
+
+    <select id="findPermissionByRoleId" parameterType="int" resultType="int">
+        SELECT pid
+        FROM role_permission
+        WHERE rid = #{rid}
+    </select>
+
+    <delete id="deletePermissionByRoleId" parameterType="int">
+        DELETE
+        FROM role_permission
+        WHERE rid = #{rid}
+    </delete>
+
+    <insert id="insertPermissionById" parameterType="int">
+        insert into role_permission values (#{rid},#{pid})
+    </insert>
+
+</mapper>

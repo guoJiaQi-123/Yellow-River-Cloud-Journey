@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tyut.travel.mapper.ProductMapper">
+    <resultMap id="productMap" type="com.tyut.travel.pojo.Product">
+        <id property="pid" column="pid"/>
+        <result property="productName" column="productName"/>
+        <result property="price" column="price"/>
+        <result property="hotline" column="hotline"/>
+        <result property="status" column="status"/>
+        <result property="productDesc" column="productDesc"/>
+        <result property="pImage" column="pImage"/>
+        <result property="cid" column="cid"/>
+        <association property="category" column="cid" javaType="com.tyut.travel.pojo.Category">
+            <id property="cid" column="cid"/>
+            <result property="cname" column="cname"/>
+        </association>
+    </resultMap>
+    <select id="findProductPage" resultMap="productMap">
+        SELECT *
+        FROM product
+                 LEFT JOIN category
+                           on product.cid = category.cid
+        ORDER BY product.pid DESC
+    </select>
+
+
+    <select id="findOne" resultMap="productMap" parameterType="int">
+        SELECT *
+        FROM product
+                 LEFT JOIN category
+                           on product.cid = category.cid
+        where pid = #{pid}
+    </select>
+
+    <select id="findIsFavorite" resultType="int">
+        select count(*)
+        from favorite
+        where pid = #{pid}
+          and mid = #{mid}
+    </select>
+
+    <insert id="addFavorite">
+        insert into favorite(pid, mid)
+        values (#{pid}, #{mid})
+    </insert>
+
+    <delete id="delFavorite">
+        delete
+        from favorite
+        where pid = #{pid}
+          and mid = #{mid}
+    </delete>
+
+
+    <select id="findMyFavorite" parameterType="int" resultType="com.tyut.travel.pojo.Product">
+        SELECT product.*
+        FROM product
+                 LEFT JOIN favorite
+                           ON product.`pid` = favorite.`pid`
+        WHERE favorite.`mid` = #{mid}
+    </select>
+</mapper>

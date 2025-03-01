@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>用户管理-用户详情</title>
+    <!--引入公共CSS文件-->
+    <th:block th:replace="~{/backstage/common_resources::common_css}"></th:block>
+</head>
+
+<body class="hold-transition skin-purple sidebar-mini">
+<div class="wrapper">
+    <!-- 页面头部 -->
+    <header th:replace="~{/backstage/common_header::header}"></header>
+    <!-- 页面头部 /-->
+
+    <!-- 导航侧栏 -->
+    <aside th:replace="~{/backstage/common_aside::aside}"></aside>
+    <!-- 导航侧栏 /-->
+
+    <!-- 内容区域 -->
+    <div class="content-wrapper">
+
+        <!-- 内容头部 -->
+        <section class="content-header">
+            <h1>
+                <a href="/backstage/admin/all">用户管理</a>
+                <small>用户详情</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="/backstage/index"><i class="fa fa-dashboard"></i> 首页</a></li>
+                <li><a href="/backstage/admin/all">用户管理</a></li>
+                <li class="active">用户详情</li>
+            </ol>
+        </section>
+        <!-- 内容头部 /-->
+
+        <!-- 正文区域 -->
+        <section class="content">
+            <div class="panel panel-default">
+                <div class="panel-heading">管理员信息</div>
+                <table id="collapse-table" class="table table-bordered table-hover dataTable">
+                    <thead>
+                    <tr>
+                        <th>管理员角色</th>
+                        <th>详情</th>
+                    </tr>
+                    </thead>
+                    <tbody th:each="role,status:${admin.roles}">
+                    <tr th:attr="data-tt-id=${status.index}">
+                        <td th:text="${role.roleName}"></td>
+                        <td th:text="${role.roleDesc}"></td>
+                    </tr>
+                    <tr th:each="permission:${role.permissions}" th:attr="data-tt-parent-id=${status.index}"
+                        data-tt-id="1-1">
+                        <td th:text="${permission.permissionName}"></td>
+                        <td th:text="${permission.permissionDesc}"></td>
+                    </tr>
+                    </tbody>
+
+
+                </table>
+                <div class="box-title text-center">
+                    <button type="button" class="btn bg-blue" onclick="history.back(-1);">返回</button>
+                </div>
+            </div>
+        </section>
+        <!-- 正文区域 /-->
+
+    </div>
+    <!-- 内容区域 /-->
+
+    <!-- 底部导航 -->
+    <footer th:replace="~{/backstage/common_footer::footer}"></footer>
+    <!-- 底部导航 /-->
+</div>
+<!--引入公共js文件-->
+<th:block th:replace="~{/backstage/common_resources::common_js}"></th:block>
+
+<script>
+    $(document).ready(function () {
+
+        /*table tree*/
+        $("#collapse-table").treetable({
+            expandable: true
+        });
+
+    });
+</script>
+</body>
+
+</html>
